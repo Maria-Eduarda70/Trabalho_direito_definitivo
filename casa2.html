@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casa 2 - Detalhes</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="casa2.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Proprius Advocacia</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="index.html#servicos">Serviços</a></li>
+                    <li><a href="index.html#sobre">Sobre</a></li>
+                    <li><a href="index.html#blog">Blog</a></li>
+                    <li><a href="index.html#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="detalhes-casa2">
+        <div class="container">
+            <div class="casa-details">
+                <div class="imagem-casa">
+                    <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+                    <div class="slides">
+                        <img src="casa2.1.jpg" alt="Casa 2">
+                        <img src="Casa2.2.jpg" alt="Casa 2">
+                        <img src="Casa2.3.jpg" alt="Casa 2">
+                        <img src="Casa2.4.jpg" alt="Casa 2">
+                        <img src="Casa2.5.jpg" alt="Casa 2">
+                        <img src="Casa2.6.jpg" alt="Casa 2">
+                        <img src="Casa2.7.jpg" alt="Casa 2">
+                        <img src="Casa2.8.jpg" alt="Casa 2">
+                        <img src="Casa2.9.jpg" alt="Casa 2">
+                        <img src="Casa2.10.jpg" alt="Casa 2">
+                    </div>
+                    <button class="next" onclick="changeSlide(1)">&#10095;</button>
+                </div>
+                <div class="processo-juridico">
+                    <h2>Processo Jurídico</h2>
+                    <p>Situação do processo jurídico: Em andamento.</p>
+                </div>
+            </div>
+
+            <div class="descricao-preco">
+                <h2>Descrição</h2>
+                <p>Apartamento localizado na Rua Evidências, nº 424 - Centro, apartamento 216. </p>
+                <p>O imóvel possui 3 quartos, 1 banheiro, cozinha e sala com varanda, totalizando uma área de 58m².</p>
+                <p>Inclui 1 vaga de garagem e acesso à área de lazer do edifício, que conta com churrasqueira, espaço kids, campo de futebol e piscina.</p>
+                <h2>Preço</h2>
+                <p>Valor: R$100.000,00</p>
+            </div>
+
+            <button class="btn-voltar" onclick="window.location.href='pagina_imoveis.html'">Voltar</button>
+            <button class="btn-ver-contrato" onclick="window.location.href='Contrato de compra e venda.pdf'">Ver Contrato</button>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Proprius Advocacia. Todos os direitos reservados.</p>
+            <p>CNPJ: 12.345.678/0001-90</p>
+            <p>Email: proprius.advocacia@gmail.com</p>
+        </div>
+    </footer>
+    <script>
+        let currentSlide = 0;
+    
+        function changeSlide(direction) {
+            const slides = document.querySelectorAll('.slides img');
+            const totalSlides = slides.length;
+    
+            // Oculta a imagem atual
+            slides[currentSlide].style.transform = `translateX(-${100 * currentSlide}%)`;
+    
+            // Atualiza o índice do slide
+            currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+    
+            // Exibe a nova imagem
+            slides.forEach((img, index) => {
+                img.style.transform = `translateX(-${100 * currentSlide}%)`;
+            });
+        }
+    </script>    
+</body>
+</html>

@@ -1,0 +1,60 @@
+/* Estilos da seção de imóveis */
+#imoveis {
+    padding: 50px 0;
+    background-color: #f8f8f8;
+}
+
+.imovel {
+    text-align: center;
+    margin: 20px;
+}
+
+.imovel img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.imovel h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.imovel p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.btn-interesse {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none; /* Remove underline from link */
+}
+
+.btn-interesse:hover {
+    background-color: #555;
+}
+
+.btn-voltar {
+    display: block;
+    margin: 20px auto; /* Centraliza o botão */
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center; /* Garante alinhamento correto do texto */
+}
+
+.btn-voltar:hover {
+    background-color: #555;
+}

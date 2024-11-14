@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casa 3 - Detalhes</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="casa3.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Proprius Advocacia</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="index.html#servicos">Serviços</a></li>
+                    <li><a href="index.html#sobre">Sobre</a></li>
+                    <li><a href="index.html#blog">Blog</a></li>
+                    <li><a href="index.html#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="detalhes-casa3">
+        <div class="container">
+            <div class="casa-details">
+                <div class="imagem-casa">
+                    <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+                    <div class="slides">
+                        <img src="Casa3.1.jpg" alt="Casa 3">
+                        <img src="Casa3.2.jpg" alt="Casa 3">
+                        <img src="Casa3.3.jpg" alt="Casa 3">
+                        <img src="casa3.4.jpg" alt="Casa 3">
+                        <img src="Casa3.5.jpg" alt="Casa 3">
+                        <img src="Casa3.6.jpg" alt="Casa 3">
+                        <img src="Casa3.7.jpg" alt="Casa 3">
+                        <img src="Casa3.8.jpg" alt="Casa 3">
+                        <img src="Casa3.9.jpg" alt="Casa 3">
+                        <img src="Casa3.10.jpg" alt="Casa 3">
+                        <img src="Casa3.11.jpg" alt="Casa 3">
+                        <img src="Casa3.12.jpg" alt="Casa 3">
+                        <img src="Casa3.13.jpg" alt="Casa 3">
+                    </div>
+                    <button class="next" onclick="changeSlide(1)">&#10095;</button>
+                </div>
+                <div class="processo-juridico">
+                    <h2>Processo Jurídico</h2>
+                    <p>Situação do processo jurídico: Em andamento.</p>
+                </div>
+            </div>
+
+            <div class="descricao-preco">
+                <h2>Descrição</h2>
+                <p>Apartamento localizado na Rua Passarinho, nº 74, apartamento 278.</p>
+                <p>imóvel possui 3 quartos, sendo 1 suíte, 2 banheiros, cozinha e sala com varanda, totalizando uma área de 76m².</p>    
+                <p>Inclui 2 vagas de garagem e acesso à área de lazer do edifício, que conta com churrasqueira, espaço kids, campo de futebol e piscina.</p>
+
+                <h2>Preço</h2>
+                <p>Valor: R$330.000,00</p>
+            </div>
+
+            <button class="btn-voltar" onclick="window.location.href='pagina_imoveis.html'">Voltar</button>
+            <button class="btn-ver-contrato" onclick="window.location.href='Contrato de compra e venda.pdf'">Ver Contrato</button>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Proprius Advocacia. Todos os direitos reservados.</p>
+            <p>CNPJ: 12.345.678/0001-90</p>
+            <p>Email: proprius.advocacia@gmail.com</p>
+        </div>
+    </footer>
+    <script>
+        let currentSlide = 0;
+    
+        function changeSlide(direction) {
+            const slides = document.querySelectorAll('.slides img');
+            const totalSlides = slides.length;
+    
+            // Oculta a imagem atual
+            slides[currentSlide].style.transform = `translateX(-${100 * currentSlide}%)`;
+    
+            // Atualiza o índice do slide
+            currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+    
+            // Exibe a nova imagem
+            slides.forEach((img, index) => {
+                img.style.transform = `translateX(-${100 * currentSlide}%)`;
+            });
+        }
+    </script>    
+</body>
+</html>

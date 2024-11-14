@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casa 1 - Detalhes</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="casa1.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Proprius Advocacia</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="index.html#servicos">Serviços</a></li>
+                    <li><a href="index.html#sobre">Sobre</a></li>
+                    <li><a href="index.html#blog">Blog</a></li>
+                    <li><a href="index.html#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="detalhes-casa1">
+        <div class="container">
+            <div class="casa-details">
+                <div class="imagem-casa">
+                    <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+                    <div class="slides">
+                        <img src="Casa1.1.jpg" alt="Casa 1">
+                        <img src="Casa1.2.jpg" alt="Casa 1">
+                        <img src="Casa1.3.jpg" alt="Casa 1">
+                        <img src="Casa1.4.jpg" alt="Casa 1">
+                        <img src="Casa1.5.jpg" alt="Casa 1">
+                        <img src="Casa1.6.jpg" alt="Casa 1">
+                        <img src="Casa1.7.jpg" alt="Casa 1">
+                        <img src="Casa1.8.jpg" alt="Casa 1">
+                    </div>
+                    <button class="next" onclick="changeSlide(1)">&#10095;</button>
+                </div>
+                
+                <div class="processo-juridico">
+                    <h2>Processo Jurídico</h2>
+                    <p>Situação do processo jurídico: Em andamento.</p>
+                </div>
+            </div>
+
+            <div class="descricao-preco">
+                <h2>Descrição</h2>
+                <p>  Apartamento localizado na rua Estrada de vida n° 500 - Apartamento 363, contendo os seguintes itens: </p>
+                <p> 4 quartos, 3 banheiros, cozinha planejada e sala com varanda, totalizando uma área de 236m² </p>
+                <p> Também concedido 2 vagas na garagem e acesso a área de lazer do edifício, contendo churrasqueira, espaço para crianças, brinquedoteca, campo de futebol, sala de jogos e piscina.</p>
+                <h2>Preço</h2>
+                <p>Valor: R$890.000,00 </p>
+            </div>
+            
+            <button class="btn-voltar" onclick="window.location.href='pagina_imoveis.html'">Voltar</button>
+            <button class="btn-ver-contrato" onclick="window.location.href='Contrato de compra e venda.pdf'">Ver Contrato</button>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Proprius Advocacia. Todos os direitos reservados.</p>
+            <p>CNPJ: 12.345.678/0001-90</p>
+            <p>Email: proprius.advocacia@gmail.com</p>
+        </div>
+    </footer>
+    <script>
+        let currentSlide = 0;
+    
+        function changeSlide(direction) {
+            const slides = document.querySelectorAll('.slides img');
+            const totalSlides = slides.length;
+    
+            // Oculta a imagem atual
+            slides[currentSlide].style.transform = `translateX(-${100 * currentSlide}%)`;
+    
+            // Atualiza o índice do slide
+            currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+    
+            // Exibe a nova imagem
+            slides.forEach((img, index) => {
+                img.style.transform = `translateX(-${100 * currentSlide}%)`;
+            });
+        }
+    </script>    
+</body>
+</html>

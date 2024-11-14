@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proprius Advocacia</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Proprius Advocacia</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home">
+        <div class="overlay">
+            <div class="container">
+                <h2>Bem-vindo à Proprius Advocacia</h2>
+                <p>Sua parceira confiável em questões legais relacionadas à compra e venda de imóveis.</p>
+                <a href="#" class="btn btn-primary" id="btn-open-login">Consulta de Processos</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Modal de Login -->
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Login</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="username">Usuário:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Senha:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit" class="btn">Entrar</button>
+            </form>
+        </div>
+    </div>
+
+    <section id="servicos">
+        <div class="container">
+            <h2>Nossos Serviços</h2>
+            <div class="servicos-grid">
+                <div class="servico-item">
+                    <a href="servico1.html">
+                        <i class="fas fa-handshake"></i>
+                        <h3>Consultoria Imobiliária</h3>
+                    </a>
+                </div>
+                <div class="servico-item">
+                    <a href="servico2.html">
+                        <i class="fas fa-file-contract"></i>
+                        <h3>Gestão de Contratos</h3>
+                    </a>
+                </div>
+                <div class="servico-item">
+                    <a href="servico3.html">
+                        <i class="fas fa-building"></i>
+                        <h3>Incorporação Imobiliária</h3>
+                    </a>
+                </div>
+                <div class="servico-item">
+                    <a href="servico4.html">
+                        <i class="fas fa-balance-scale"></i>
+                        <h3>Contencioso Imobiliário</h3>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="sobre">
+        <div class="container">
+            <h2>Sobre Nós</h2>
+            <p>A Proprius Advocacia é um escritório de advocacia especializado em questões legais relacionadas à compra e venda de imóveis. Nossa equipe de advogados altamente qualificados possui uma vasta experiência em lidar com uma variedade de questões imobiliárias, incluindo revisão de contratos, resolução de litígios, assessoria jurídica e aconselhamento legal para transações imobiliárias.</p>
+            <p>Nosso compromisso é fornecer soluções jurídicas eficazes e orientação especializada aos nossos clientes, garantindo que suas transações imobiliárias sejam realizadas com segurança e conformidade legal. Estamos dedicados a defender os interesses de nossos clientes e a alcançar resultados positivos em todas as etapas do processo.</p>
+        </div>
+    </section>
+
+    <section id="blog">
+        <div class="container">
+            <h2>Últimas Publicações do Blog</h2>
+            <div class="blog-post">
+                <h3>Os Principais Pontos a Considerar ao Revisar um Contrato de Compra e Venda de Imóveis</h3>
+                <p>A revisão de contratos de compra e venda de imóveis é uma etapa crucial no processo de transação imobiliária. Neste artigo, discutimos os principais pontos que devem ser considerados durante essa revisão para garantir que os interesses do cliente estejam protegidos. Desde cláusulas relacionadas ao preço e condições de pagamento até disposições sobre responsabilidade por defeitos e obrigações das partes, examinamos as questões mais importantes que podem surgir em contratos imobiliários.</p>
+                <a href="blog1.html" class="btn btn-primary">Leia Mais</a>
+            </div>
+            <div class="blog-post">
+                <h3>Entendendo os Riscos Legais em Contratos de Locação de Imóveis</h3>
+                <p>A locação de imóveis é uma prática comum no mercado imobiliário, mas muitos locadores e locatários não estão cientes dos riscos legais envolvidos nesse processo. Neste artigo, exploramos os principais riscos legais que podem surgir em contratos de locação de imóveis e fornecemos orientações sobre como evitar problemas legais. Desde cláusulas de rescisão e responsabilidade por danos até questões de manutenção e reparos, discutimos os aspectos legais essenciais que devem ser considerados ao celebrar um contrato de locação de imóveis.</p>
+                <a href="blog2.html" class="btn btn-primary">Leia Mais</a>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contato">
+        <div class="container">
+            <h2>Entre em Contato</h2>
+            <div class="form-wrapper">
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScRqruFQpilnJZaBAFtUHqprdR9qMl1F41g478xBLU8c4n8uA/viewform?embedded=true" width="640" height="821" frameborder="0" marginheight="0" marginwidth="0">Carregando…</iframe>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Proprius Advocacia. Todos os direitos reservados.</p>
+            <p>CNPJ: 12.345.678/0001-90</p>
+            <p>Email: proprius.advocacia@gmail.com</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
